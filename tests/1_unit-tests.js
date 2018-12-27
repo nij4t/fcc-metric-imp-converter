@@ -28,17 +28,17 @@ suite('Unit Tests', function(){
     });
     
     test('Fractional Input', function(done) {
-      assert.equal(convertHandler.getNum('4/2'), 2)
+      assert.equal(convertHandler.getNum('1/2'), 0.5)
       done();
     });
     
     test('Fractional Input w/ Decimal', function(done) {
-      assert.equal(convertHandler.getNum('1/2'), 0.5)      
+      assert.equal(convertHandler.getNum('3.14/2'), 1.57)      
       done();
     });
     
     test('Invalid Input (double fraction)', function(done) {
-      assert.equal(convertHandler.getNum('3.14.15'), 3.14)
+      assert.equal(convertHandler.getNum('3.14.15'), 'invalid number')
       done();
     });
     
